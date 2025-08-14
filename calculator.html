@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add()
+        {            
+            var txta = document.getElementById("txta")
+            var txtb = document.getElementById("txtb")
+            var hresult = document.getElementById("hresult")
+            var a = txta.value
+            var b = txtb.value
+            var c =parseFloat(a)+parseFloat(b)
+            hresult.innerHTML="Sum is "+ c
+        }
+        function sub()
+        {            
+            var txta = document.getElementById("txta")
+            var txtb = document.getElementById("txtb")
+            var hresult = document.getElementById("hresult")
+            var a = txta.value
+            var b = txtb.value
+            var c =parseFloat(a)-parseFloat(b)
+            hresult.innerHTML="difference is "+ c
+        }
+        function multiplication()
+        {
+            
+            var txta = document.getElementById("txta")
+            var txtb = document.getElementById("txtb")
+            var hresult = document.getElementById("hresult")
+            var a = txta.value
+            var b = txtb.value
+            var c =parseFloat(a)*parseFloat(b)
+            hresult.innerHTML="multiplication  is "+ c
+        }
+        function divide()
+        {
+            
+            var txta = document.getElementById("txta")
+            var txtb = document.getElementById("txtb")
+            var hresult = document.getElementById("hresult")
+            var a = txta.value
+            var b = txtb.value
+            var c =parseFloat(a)/parseFloat(b)
+            hresult.innerHTML="division is "+ c
+        }
+
+      
+        // '1'+'1'='11'
+        // 1+1 =2
+    </script>
+</head>
+<body>
+    <p>
+        Enter a :
+        <input type="text" id="txta">
+    </p>
+    <p>
+        Enter b: 
+        <input type="text" id="txtb">
+    </p>
+    <p>
+     <input type="button" value="+" onclick="add()">
+     <input type="button" value="-" onclick="sub()"/>
+     <input type="button" value="*" onclick="multiplication()"/>
+     <input type="button" value="/" onclick="divide()"/>
+     <h2 id="hresult"></h2>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div::first-letter
+        {
+            font-size:50px;
+            font-weight: bold;
+            color:orange;
+        }
+        p::first-line
+        {
+            color:blueviolet
+        }
+        a::after {
+         content: " (" attr(href) ")";
+        }
+        a::before{
+            content: "*";
+        }
+        li::before
+        {
+            content: "🍎";
+          
+        }
+        ul
+        {list-style: none;
+        }
+#p1::before
+{
+    content: "{}";
+}
+input::placeholder {
+  font-weight: bold;
+  opacity: .4;
+  color: rgb(153, 8, 136);
+}
+p::selection {
+  color: red;
+  background-color: yellow;
+}
+
+
+
+    </style>
+</head>
+<body>
+  <div>
+    Hello Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ut nobis ipsum dicta iure atque itaque error, maiores voluptatibus ab qui nam debitis excepturi tempora accusantium dignissimos molestiae magnam ea.
+  </div>
+    <input type="text" placeholder="John@gmail.com">
+    <ul>
+        <li>Apple</li>
+        <li>banana</li>
+        <li>orange
+
+        </li>
+    </ul>
+    <a href="#" class="dead-link">DEMO</a>
+    <a href="#">HOME</a>
+    <a href="lec2 selectors .html">About us </a>
+    <p id="p1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus, exercitationem, repellat qui voluptatem, error corporis quidem earum aspernatur similique itaque quis vitae amet temporibus blanditiis eos cupiditate placeat distinctio. Magni.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus, exercitationem, repellat qui voluptatem, error corporis quidem earum aspernatur similique itaque quis vitae amet temporibus blanditiis eos cupiditate placeat distinctio. Magni.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus, exercitationem, repellat qui voluptatem, error corporis quidem earum aspernatur similique itaque quis vitae amet temporibus blanditiis eos cupiditate placeat distinctio. Magni.
+
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus, exercitationem, repellat qui voluptatem, error corporis quidem earum aspernatur similique itaque quis vitae amet temporibus blanditiis eos cupiditate placeat distinctio. Magni.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus, exercitationem, repellat qui voluptatem, error corporis quidem earum aspernatur similique itaque quis vitae amet temporibus blanditiis eos cupiditate placeat distinctio. Magni.
+    </p>
+    
+</body>
+</html>

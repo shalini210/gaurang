@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* by element name  */
+        div>div
+        {
+            color:brown;
+            font-size: 25px;
+        }
+        div:nth-child(even)>h1
+        {
+            color:red;
+            font-size: 12px;
+
+        }
+        div:nth-child(3n+1)
+        {
+            color:blue
+        }
+        #banner
+        {
+            height:100dvh;
+            width:100%;
+            background-color: yellowgreen;
+        }
+        body
+        {
+            margin: 0;
+        }
+        .box
+        {
+            height:100px;
+            width:100px;
+            background-color: orange
+            ;
+        }
+        .red
+        {
+            color:red
+        }
+        .blue
+        {
+            color:blue
+        }
+    </style>
+</head>
+<body>
+    <div class="box blue">
+This is div
+    </div>
+    <h1 class="box red">heading</h1>
+    <div id="banner">
+
+    </div>
+    <div>This is div 1</div>
+    <div>This is div 2
+        <h1>This is heading</h1>
+    </div>
+    <div>This is div 3</div>
+    <div>This is div 4</div>
+    <div>This is div 5</div>
+    <div>This is div 6</div>
+    <div>This is div 7</div>
+    <div>This is div 8</div>
+       <div>This is div 9</div>
+    <div>This is div 10</div>
+    <div>This is div 11</div>
+    <div>This is div 12</div>
+
+    <!-- <div>
+    <div>This is div 5</div>
+    </div> -->
+    
+</body>
+</html>

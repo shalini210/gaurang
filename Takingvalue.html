@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function hello()
+        {
+            
+            var txtname = document.getElementById("txtname")
+            var txtlname = document.getElementById("txtlname")
+            var hresult = document.getElementById("hresult")
+            var lname = txtlname.value
+            var name = txtname.value
+            hresult.innerHTML="Welcome "+name+" "+lname
+        }
+    </script>
+</head>
+<body>
+    <p>
+        Enter First name :
+        <input type="text" id="txtname">
+    </p>
+    <p>
+        Enter Last NAme : 
+        <input type="text" id="txtlname">
+    </p>
+    <p>
+     <input type="button" value="Click here" onclick="hello()">
+     <h2 id="hresult"></h2>
+</body>
+</html>

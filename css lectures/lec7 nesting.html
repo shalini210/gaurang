@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #contact
+        {
+            display: flex;
+            padding-top:50px;
+            padding-bottom:50px;
+            justify-content: center;
+            background-color: rgb(189, 250, 229);
+            gap:20px;
+        
+        }
+        #contact>div:hover
+        {
+            background-color: rgb(246, 242, 242);
+        }
+        #contact>div{
+            height: 400px;
+            width:30%;
+            background-color: white;
+            border-radius: 25px;
+        }
+        #contact>div>img
+        {
+            width:94%;
+            margin:3% 3% 0 3%;
+            height:180px;
+            border-radius: 25px;
+        }
+         #contact>div>div
+         {
+            
+            height:25px;
+            margin:5% 6% 0 6%;
+            /* background-color: orange; */
+         }
+         #contact>div>div>p
+         {
+            margin-bottom: 15%;
+            margin-top:12%;
+         }
+          #contact>div>div>a
+          {
+            text-decoration: none;
+            height: 32px;
+            display: flex;
+            align-items: center;
+          }
+          #contact>div>div>a::before {
+      content: '';
+    background-image: url(images/arrow.jfif);
+    display: inline-block;
+    width: 32px;
+    margin-right:15px;
+    background-size: cover;
+    height: 32px;
+}
+    </style>
+</head>
+<body>
+    <section id="contact">
+        <div>
+            <img src="images/contact1.avif" alt="">
+            <div>
+                <h2>Chat with sales</h2>
+                <p>Available M-F 6 AM to 3 PM PT. </p>
+                <a href="#">Chat now</a>
+            </div>
+        </div>
+        <div>
+            <img src="images/contact2.avif" alt="">
+            <div>
+                <h2>Request we contact you</h2>
+                <p>Have a Power BI sales expert contact you.</p>
+                <a href="#">Send a request</a>
+            </div>
+        </div>
+        <div>
+            <img src="images/contact3.avif" alt="">
+            <div>
+                <h2>Call sales
+</h2>
+                <p>Available M-F 6 AM to 3 PM PT.  </p>
+                <a>Call &nbsp;: &nbsp;<u> (878) 8744584</u></a>
+            </div>
+        </div>
+        
+    </section>
+    
+</body>
+</html>

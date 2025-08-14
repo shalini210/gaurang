@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container
+        {
+            padding:25px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #container>div
+        {
+            height:150px;
+            width: 150px;
+        }
+        .d1
+        {
+        background:radial-gradient(ellipse at top, #ea1818 10%, transparent 30%),
+        radial-gradient(ellipse at bottom, #4d9f0c 10%, transparent 30%);
+        }
+        .d2
+        {
+            background:radial-gradient( farthest-corner at 40px 40px  ,red,blue    );
+        }
+        .d3
+        {
+            background:radial-gradient( closest-corner at 40px 40px  ,red,blue    );
+        }
+        .d4
+        {
+            background:
+            radial-gradient( farthest-corner at 130px 130px  ,
+transparent 30% ,rgb(23, 23, 237),rgb(6, 4, 134) 50% 51%,rgb(23, 23, 237) ,transparent 55%  ),
+             radial-gradient( farthest-corner at 0px 0px  ,
+            rgb(35, 51, 224) 5% ,blue 20%,transparent ),
+radial-gradient( farthest-corner at 140px 140px  ,
+rgb(62, 4, 132) 1% ,rgb(93, 62, 249) 10% ,transparent  );
+
+
+        }
+    </style>
+</head>
+<body>
+    <div id = "container">
+        <div class="d1"></div>
+        <div class="d2"></div>
+        <div class="d3"></div>
+        <div class="d4"></div>
+        <div class="d5"></div>
+        <div class="d6"></div>
+        <div class="d7"></div>
+        <div class="d8"></div>
+        <div class="d9"></div>
+        <div class="d10"></div>
+        <div class="d11"></div>
+        <div class="d12"></div>
+    </div>
+    
+</body>
+</html>

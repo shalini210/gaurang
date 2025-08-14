@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .person
+        {
+ width: 194px;
+        height: 168px;
+    background-clip: border-box;
+    background-size: contain;
+    background-position: center;
+    border-radius: 60px;
+    position: absolute;
+    
+        }
+        .person1
+        {
+            
+    background-image: url(images/boy1.png);
+   top:90px;
+     left:25px;
+     
+        }
+        .person1:hover{
+            background-color: red;
+            
+        }
+         .person2
+        {
+    z-index:5;
+    background-image: url(images/boy2.png);
+    top:1px;
+    left:190px;
+        }
+           .person3
+        {
+    left:348px;
+    background-image: url(images/boy5.png);
+    top:90px;
+    z-index: 11;
+    clear: both;
+    
+        }
+
+        img{
+            width: 194px;
+        height: 168px;
+        border-radius: 60px;
+        clear: both;
+        }
+        .container
+        {
+            display: flex;
+            background-color: #f0f3f3;
+            height: 100dvh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="person person1">
+<img src="images/m1.png" alt="">
+    </div>
+    <div class=" person person2">
+<img src="images/m1.png" alt="">
+    </div>
+      <div class="person person3">
+<img src="images/m1.png" alt="">
+    </div>
+     
+    </div>
+    
+</body>
+</html>

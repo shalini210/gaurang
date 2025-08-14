@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box
+        {
+            height: 100px;
+            width:100px;
+            border-radius: 50%;
+            animation: animate-box 2s infinite alternate;
+            /* animation-name: animate-box;
+            animation-duration: 2s;
+            animation-iteration-count: infinite; */
+            /* animation-direction: alternate; */
+            visibility: hidden;
+            
+        }
+        .b1
+        {
+            animation-timing-function: linear;
+            background-color: yellow;
+            animation-delay: 2s;        }
+        .b2
+        {
+            animation-timing-function: ease-in;
+            background-color: violet;
+        }
+        .b3{
+            animation-timing-function: ease-out;
+            background-color: greenyellow;
+    
+        }
+.box:nth-child(even)
+{
+    animation-delay: 2s;
+    animation-duration: 4s;
+}
+.box:nth-child(2n+1)
+{
+    animation-delay: 1s;
+    animation-duration: 2s;
+}
+        @keyframes animate-box{
+            from{margin-top:0px;visibility: visible;}
+            to{margin-top: 80dvh;}
+        }
+        .fish
+        {
+            width:150px; height:75px;
+            background-image: url(images/fish.png);
+            background-size: cover;
+            
+        }
+        .f1
+        {
+            margin-top:80dvh;
+        }
+        .f2
+        {
+            margin-top:65dvh;
+            
+  transform: scaleX(-1);
+
+  /* animation: animate-fish 3s linear infinite; */
+    animation: animate-fish 6s ease-in-out infinite;
+
+
+        }
+        
+   @keyframes animate-fish {
+  0% {
+    margin-left: 0%;
+    margin-top: 80dvh;
+  }
+
+  40% {
+    margin-left: 35%;
+    margin-top: 120px;
+  }
+
+  48% {
+    margin-left: 38%;
+    margin-top: 100px;
+  }
+
+  52% {
+    margin-left: 39%;
+    margin-top: 95px;
+  }
+
+  56% {
+    margin-left: 42%;
+    margin-top: 90px;
+  }
+
+  60% {
+    margin-left: 45%;
+    margin-top: 83px;
+  }
+
+  64% {
+    margin-left: 50%;
+    margin-top: 80px;
+  }
+
+  100% {
+    margin-left: 90%;
+    margin-top: 80dvh;
+  }
+}
+
+
+        
+    </style>
+</head>
+<body>
+    <div style="display: flex;
+    background:  linear-gradient(#2196F3, #f3cc7f 60% 66%, aqua);
+    height:100dvh;overflow: hidden;">
+   
+   <div class="fish f2">
+
+   </div>
+    </div>
+</body>
+</html>

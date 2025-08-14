@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showmsg()
+        {
+            let txtname = document.getElementById("txtname")
+            let txtcontact = document.getElementById("txtcontact")
+            let txtmessage = document.getElementById("txtmessage");
+            let msg =`Hello ${txtname.value} Thank you for contacting us  , WE will 
+            connect you soon on ${txtcontact.value}`
+            alert(msg)
+            txtname.value=""
+            txtcontact.value=""
+            txtmessage.value=""
+         }
+    </script>
+</head>
+<body>
+    <div>
+        <p> name  :  <input type="text" id="txtname"></p>
+        <p> contact no :  <input type="text" id="txtcontact"></p>
+        <p> Message : <textarea id="txtmessage">
+
+        </textarea></p>
+        <input type="button" value="Send message" onclick="showmsg()"/>
+    </div>
+    
+</body>
+</html>

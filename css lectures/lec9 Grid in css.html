@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .board{
+            display: grid;
+            width: 63%;
+            grid-template-columns:1fr;
+            /* grid-template-rows: repeat(4,100px); */
+            background-color: rgb(23, 208, 60);
+            
+
+        }
+        .board>div
+        {
+            display: grid;
+            width: 100%;
+            grid-template-columns: 100px 100px 100px 100px;
+            grid-template-rows: 100px;
+            
+        }
+      .board>div:nth-child(odd)>div:nth-child(even)
+      {
+        background-color: black;
+      }
+      .board>div:nth-child(odd)>div:nth-child(odd)
+      {
+        background-color: rgb(213, 147, 147);
+      }
+.board>div:nth-child(even)>div:nth-child(even)
+      {
+        background-color:  rgb(213, 147, 147);
+      }
+      .board>div:nth-child(even)>div:nth-child(odd)
+      {
+        background-color:black;
+      }
+
+      .board>div
+      {
+        /* height: 100px;
+        width: 100px; */
+        border:1px solid black;
+      }
+    </style>
+</head>
+<body>
+    <div class="board">
+        <div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+</div>
+<div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+</div>
+<div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+</div>
+<div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+</div>        
+    </div>
+   
+</body>
+</html>

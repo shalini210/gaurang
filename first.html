@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       function fun1(msg)
+       {
+        var username = prompt("enter your name")
+        alert(msg +" " + username)
+       }
+
+       function fun2(msg)
+       {
+       var username =  prompt("Enter your name ")
+    //    alert(`good morning ${username} `)
+        alert(msg+" "+ username )
+       }
+       function fun3()
+       {
+        var studentname = prompt("enter your first name")
+        var lastname = prompt("enter your last name")
+        alert("good morning " + studentname+" " + lastname)
+       }
+    </script>
+</head>
+<body>
+    <!-- <input type="button" value="Click here " 
+    onclick="alert('Hello world how are you ')">
+    <input type="button" value="Click here " onclick="fun1()">
+    <input type="button" value="GM" onclick="fun2('Good Morning')"/>
+    <input type="button" value="GE" onclick="fun2('Good Evening')">
+    <input type="button" value="WElcome" onclick="fun3()">
+    <input type=" button" value="" -->
+    <input type="button" value="Good Morning" onclick="fun1('good morning')">
+    <input type="button" value="Good Afternoon" onclick="fun1('good Afternoon')">
+    <input type="button" value="Good Evening" onclick="fun1('good Evening')">
+    <input type="button" value="Good Night" onclick="fun1('good Night')">
+</body>
+</html>

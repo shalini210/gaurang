@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function welcome()
+        {
+    let txtname=document.getElementById("txtname")
+    let hmsg =  document.getElementById("hmsg")
+       let name =  txtname.value
+     hmsg.innerHTML=  `welcome ${name}`
+       txtname.value=""
+        }
+    </script>
+</head>
+<body>
+<p>
+    Enter First NAme : <input type="text" id="txtname">
+    
+</p>
+<p>
+    Enter Email : <input type="text" id="txtname">
+    
+</p>
+<p>
+    Enter MSg : <textarea></textarea>
+</p>
+<input type="button" value="Send" onclick="welcome()">    
+<h1 id="hmsg"></h1>
+
+</body>
+</html>

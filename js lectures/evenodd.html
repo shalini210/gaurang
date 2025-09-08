@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function evenodd(op)
+        {
+            var txta = document.getElementById("txta")
+            var txtb = document.getElementById("txtb")
+            var hresult = document.getElementById("hresult")
+            let a = parseInt(txta.value)
+            let b = parseInt(txtb.value)
+            hresult.innerHTML=""
+            if(op=='even')
+        {
+            for(var i = a;i<=b;i++)
+            {
+                if(i%2==0)
+                {
+hresult.innerHTML+= i +" "                    
+                }
+            }
+        }
+        else if(op=='odd')
+        {
+for(var i = a;i<=b;i++)
+            {
+                if(i%2!=0)
+                {
+hresult.innerHTML+= i +" "                    
+                }
+            }
+        }
+//             for(var i = a;i<=b;i++)
+//         {
+//             if( op=='even' && i%2==0)
+//         {
+//             hresult.innerHTML+=i+" "
+//         }
+//         else if( op=='odd' && i%2==1)
+//         {
+//             hresult.innerHTML+=i+" "
+//         }
+// // a=a+1
+// // a+=1
+//         }
+          
+        }
+    </script>
+</head>
+<body>
+    <p>
+        Enter start no : <input type="text" id="txta">
+    </p>
+    <p>
+        Enter End no : <input type="text" id="txtb">
+    </p>
+    <input type="button" value="Find EVEN" onclick="evenodd('even')">
+        <input type="button" value="Find ODD" onclick="evenodd('odd')">
+    <h2 id="hresult"></h2>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fish
+        {
+            height:50px;
+            margin-left:90%;
+            overflow: hidden;            
+        }
+        .fish-animated
+        {
+            animation: fish-animate 5s linear infinite;
+        }
+        @keyframes fish-animate {
+              from{margin-left:100%}  
+              to{margin-left:-10%}
+        }
+    </style>
+    <script>
+        function startMoving(e)
+        {
+            // console.log(Math.round(Math.random()*(1000)))
+            let duration = Math.round(Math.random()*(10000))
+            if(duration<5000)
+        {
+            duration = duration+4000        }
+            e.style.animationDuration=duration+'ms'
+e.className="fish fish-animated"
+        }
+        function hideFish(e)
+        {
+e.style.display ="none"
+        }
+    </script>
+</head>
+<body style="overflow: hidden;">
+    <img  src="images/fish.png" alt="" class="fish" onclick="hideFish(this)"
+     onload="startMoving(this)">
+    <br>
+    <img src="images/fish.png" alt="" class="fish" onclick="hideFish(this)"
+    onload="startMoving(this)">
+    <br>
+    <img src="images/fish.png" alt="" class="fish" onclick="hideFish(this)"
+     onload="startMoving(this)">
+    <br>
+    <img src="images/fish.png" alt="" class="fish" 
+    onclick="hideFish(this)" onload="startMoving(this)">
+</body>
+</html>

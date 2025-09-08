@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function fun1()
+        {
+            let txta = document.getElementById("txta");
+            let txtb = document.getElementById("txtb");
+            let txtc = document.getElementById("txtc");
+            let hresult = document.getElementById("hresult")
+            let a = parseInt(txta.value)
+            let b = parseInt(txtb.value)
+            let c = parseInt(txtc.value)
+            if(a>b && a>c)
+            {
+                hresult.innerHTML="a is highest"
+            }
+            else
+            {
+               if(b>c)
+            {
+                hresult.innerHTML = "b is highest"
+            } 
+            else
+            {
+                hresult.innerHTML = "c is highest"
+            }
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>
+        a: <input type="text" id="txta">
+    </p>
+    <p>
+        b: <input type="text" id="txtb">
+    </p>
+    <p>
+        c <input type="text" id="txtc">
+    </p>
+    <input type="button" value="Find" onclick="fun1()">
+    <h1 id="hresult">
+
+    </h1>
+</body>
+</html>

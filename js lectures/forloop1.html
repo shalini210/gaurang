@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showNumbers(flag)
+        {
+            let pnumbers = document.getElementById("pnumbers");
+            if(flag==1)
+            {
+             for(var i =1;i<=5;i++)
+                {
+                    pnumbers.innerHTML= pnumbers.innerHTML+ i                   
+                }
+            }
+            else
+            {
+                for(i=5;i>=1;i--)
+            {
+                console.log(i)
+            }
+            }
+        }        
+    </script>
+</head>
+<body>
+    <p>
+        Enter start no : <input type="text">
+    </p>
+    <p>
+        Enter end no : <input type="text">
+    </p>
+    <input type="button" value="Show numbers" onclick="showNumbers(1)">
+    <input type="button" value="Show reverse numbers " onclick="showNumbers(2)">
+    <p id="pnumbers">
+
+    </p>
+</body>
+</html>

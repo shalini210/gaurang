@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getbill()
+        {
+            var txtunits = document.getElementById("txtunits")
+            var presult = document.getElementById("presult");
+            let units = parseInt(txtunits.value);
+            let cname = "blue"
+            let msg = "invalid units "
+            if(units>0 && units<51)
+            {
+                cname = "green"
+                msg = `your will for ${units } is calculated 
+                @5rs/unit Total bill is ${units*5}`
+            }
+            else
+            {
+                if(units>50 && units<101)
+            {
+                cname = "orange"
+                msg = `your will for ${units } is calculated @7rs/unit 
+                Total bill is ${units*7}`
+
+            }
+            else if(units>100)
+            {
+                cname = "red"
+                msg = `your will for ${units } is calculated @10rs/unit 
+                Total bill is ${units*10}`
+            }
+            }
+            presult.innerHTML=msg;
+            presult.style.color=cname;
+        }
+    </script>
+</head>
+<body>
+<!-- enter name : -->
+enter units : <input type="number" id="txtunits" min="0">
+<input type="button" value="Bill" onclick="getbill()">
+<p id="presult">
+
+</p>
+<p>
+    if units  <0  invalid units
+    if units >0 and less <50 then calulate @5rs green color background
+    if units >50 and less <100 then calulate @7rs orange color background
+     if units >100 @10rs red color background
+</p>    
+</body>
+</html>

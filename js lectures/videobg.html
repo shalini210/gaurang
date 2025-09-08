@@ -1,0 +1,68 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Video Background Example</title> 
+    <style>
+        .video-container
+        {
+            height:70dvh;
+            width:100%
+        }
+        #background-video
+        {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        .overlay-content
+        {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: #ef2aff9e;
+        }
+        .ytp-show-cards-title
+        {
+            visibility:hidden
+        }
+    </style>
+</head> 
+<body> 
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/V8sqRCuvvzE?si=rAkbgShzT0GQhiZE&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="video-container"> 
+        <!-- <video autoplay loop muted id="background-video"> 
+            <source src="cartoonvideo.mp4"
+             type="video/mp4"> 
+            Your browser does not support the video tag. 
+        </video>  -->
+
+<iframe class="inner" frameborder="0" 
+allowfullscreen="" 
+allow="accelerometer; autoplay; clipboard-write;
+ encrypted-media; gyroscope; picture-in-picture;
+  web-share"
+   referrerpolicy="strict-origin-when-cross-origin" 
+  src="https://www.youtube.com/embed/V8sqRCuvvzE?playlist=V8sqRCuvvzE&amp;iv_load_policy=3&amp;enablejsapi=1&amp;disablekb=1&amp;autoplay=1&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;loop=1&amp;wmode=transparent&amp;origin=https%3A%2F%2Flive.21lab.co&amp;widgetid=1&amp;forigin=https%3A%2F%2Flive.21lab.co%2Fnanosoft-3%2F&amp;aoriginsup=1&amp;gporigin=https%3A%2F%2Flive.21lab.co%2F&amp;vf=1" 
+id="background-video"></iframe>
+
+
+        <div class="overlay-content"> 
+            <h1>Welcome to My Website</h1> 
+            <p>Discover amazing content.</p> 
+            <button id="toggleButton" onclick="toggleVideo()">Pause/Play</button> 
+        </div> 
+    </div> 
+    <script> 
+        function toggleVideo() { 
+            var video = document.getElementById("background-video"); 
+            if (video.paused) { 
+                video.play(); 
+            } else { 
+                video.pause(); 
+            } 
+        } 
+    </script> 
+</body> 
+</html>

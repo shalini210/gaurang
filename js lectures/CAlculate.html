@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function add()
+        {
+             let txta = document.getElementById("txta")
+             let txtb = document.getElementById("txtb")
+             let hresult =document.getElementById("hresult")
+             let c = parseInt(txta.value) + parseInt(txtb.value) ;
+             hresult.innerHTML ="sum is "+ c
+        }
+    </script>
+</head>
+<body>
+    <p>
+        a <input type="text" id="txta">
+    </p>
+    <p>
+        b <input type="text" id="txtb">
+    </p>
+    <input type="button" value="+" onclick="add()">
+    <input type="button" value="-">
+    <input type="button" value="/">
+    <input type="button" value="*">
+    <h2 id="hresult"></h2>
+</body>
+</html>

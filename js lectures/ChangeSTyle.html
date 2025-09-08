@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checkEligibility() {
+        let txtage = document.getElementById("txtage")    
+        let hresult = document.getElementById("hresult");
+        let age = parseInt(txtage.value)      
+        // if(age<0 || age>120)
+        // {
+        //      hresult.innerHTML="Invalid age"
+        //       hresult.style.color="Black" 
+        // }
+        // else
+        // {
+        //     if(age>=18)
+        //       {   
+        //          hresult.innerHTML="You are eligible to vote"
+        //         hresult.style.color="greenyellow"
+            
+        //         }
+        //          else
+        //         {     
+        //             hresult.innerHTML = "you are not eligible to vote"
+        //           hresult.style.color = "red"
+        //         }
+        // }
+        if(age>=18 && age<120)
+        {   
+                hresult.innerHTML="You are eligible to vote"
+                hresult.style.color="greenyellow"            
+        }
+        else
+        {         
+           if(age>=0 && age<120)
+           {
+            hresult.innerHTML = "you are not eligible to vote"
+              hresult.style.color = "red"
+            }
+          else
+             {
+                hresult.innerHTML="Invalid age"
+              hresult.style.color="Black" 
+              }
+        }
+txtage.value=""
+txtage.focus()
+        }
+    </script>
+</head>
+<body>
+<p>
+    Enter age: <input type="text" id="txtage">
+    <input type="button" value="check" onclick="checkEligibility()">
+</p>
+<h2 id="hresult">
+
+</h2>
+</body>
+</html>

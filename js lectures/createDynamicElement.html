@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+               .ballon-bursted
+        {
+            height:50px;width:50px;
+            background-color: transparent;
+            visibility: hidden;
+        }
+        .ballon
+        {
+            height:50px;width:50px;border:1px solid white;
+            background-color: yellowgreen;
+            /* margin-top:85dvh; */
+            border-radius:50% 50% 50% 0;
+            transform: rotate(315deg);
+            visibility: hidden;
+            animation:animate-ballon 4s linear ;
+            
+        }
+        @keyframes animate-ballon {
+            from {margin-top:100dvh;visibility: visible;}
+            to:{margin-top:0;visibility:hidden;}
+            
+        }
+        #box
+        {
+            display: flex; 
+            flex-wrap: wrap;
+            height:100dvh;
+            overflow: hidden;
+            width:100%;
+            background-color: black;
+        }
+        body
+        {margin:0}
+    </style>
+    <script>
+            let count = 0 ;
+        function Addbox()
+        {
+        
+            let box = document.getElementById("box")
+            for(i=0;i<=20;i++)
+        {
+            let newdiv = document.createElement("div")
+            let n = Math.round(Math.random()*25)
+            newdiv.className="ballon"
+            // newdiv.onclick(()=>(burstBallon(this)))
+            newdiv.addEventListener("click",function burstBallon(e)
+        {
+            console.log(e)
+            count++
+            let score = document.getElementById("score")
+            score.innerHTML=count
+            this.className="ballon-bursted"
+            // this.style.visibility="hidden"
+            // this.style.display="none"
+            const endscreen = document.getElementById('end-screen');
+
+            
+        })
+            let cname = "red"
+            if(n%4==0)
+            {
+                cname="yellow"
+            }
+            else if(i%4==1)
+            {
+                cname="orange"
+            }
+             else if(i%4==2)
+            {
+                cname="purple"
+            }
+            newdiv.style.backgroundColor=cname;
+            newdiv.style.animationDuration = n+"s"
+            box.appendChild(newdiv)
+        }
+       
+        }
+    </script>
+</head>
+<body onload="Addbox()">
+    <h1 id="score">0</h1>
+    <div id="box">
+       <div id="end-screen">
+           <h3>Game over</h3>
+       </div>
+    </div>
+</body>
+</html>

@@ -32,38 +32,42 @@
         {
             display: flex; 
             flex-wrap: wrap;
+            color:white;
             height:100dvh;
             overflow: hidden;
             width:100%;
+            background-color: black;
+        }
+        .timeup
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size:75px;
+            color:white;
             background-color: black;
         }
         body
         {margin:0}
     </style>
     <script>
-            let count = 0 ;
+        let count = 0 ;
         function Addbox()
-        {
-        
+        {        
             let box = document.getElementById("box")
-            for(i=0;i<=20;i++)
+            let time = 0 ;            
+            for(i=1;i<=20;i++)
         {
             let newdiv = document.createElement("div")
-            let n = Math.round(Math.random()*25)
+            let n = Math.round(Math.random()*35)
             newdiv.className="ballon"
-            // newdiv.onclick(()=>(burstBallon(this)))
             newdiv.addEventListener("click",function burstBallon(e)
         {
             console.log(e)
             count++
             let score = document.getElementById("score")
             score.innerHTML=count
-            this.className="ballon-bursted"
-            // this.style.visibility="hidden"
-            // this.style.display="none"
-            const endscreen = document.getElementById('end-screen');
-
-            
+            this.className="ballon-bursted"                        
         })
             let cname = "red"
             if(n%4==0)
@@ -79,19 +83,38 @@
                 cname="purple"
             }
             newdiv.style.backgroundColor=cname;
+            if(n>time)
+            {
+                time=n
+            }
             newdiv.style.animationDuration = n+"s"
             box.appendChild(newdiv)
         }
-       
+         setTimeout(()=>
+        {
+            // alert("cal")
+            console.log(time)
+            box.innerHTML="time up <br> your score " + count
+            box.className = "timeup"
+
+        },time*1000)
         }
+      
     </script>
 </head>
 <body onload="Addbox()">
-    <h1 id="score">0</h1>
-    <div id="box">
-       <div id="end-screen">
+    <div style="display: flex;"> 
+        
+    <div  style="width:10%;background-color: orange;
+    font-weight: bold;
+    font-size:30px;text-align: center;padding-top:50px;">
+    Score : <div id="score">0</div></div>
+    <div id="box" style="width:90%">
+       <!-- <div id="end-screen">
            <h3>Game over</h3>
-       </div>
+       </div> -->
+    </div>
+    
     </div>
 </body>
 </html>

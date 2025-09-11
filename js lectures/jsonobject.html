@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var students=[]
+        function AddData()
+        {    var txtname = document.getElementById("txtname");
+            var txtemail = document.getElementById("txtemail")
+            var pdemo = document.getElementById("pdemo");
+            let student ={}
+            student.name = txtname.value 
+            student.email = txtemail.value
+            students.push(student)
+            console.log(students)
+            showData()
+            txtname.value=""
+            txtemail.value=""
+            txtname.focus()
+            // pdemo.innerHTML = `qwlcome ${student.name} we will c ontact you on ${student.email}`
+        }    
+        function showData()
+        {
+            var tbdy = document.getElementById("tbdy");
+            let s=""
+            for(var i=0;i<students.length;i++)
+            {
+                 s+= `<tr><td>${students[i].name}</td><td>${students[i].email}</td> </tr>`
+            }
+            tbdy.innerHTML = s;
+        }    
+    </script>
+</head>
+<body>    <p> Enter name : <input type="text" id="txtname"></p>
+    <p>Enter email : <input type="text" id="txtemail"> </p>
+    <input type="button" value="Add" onclick="AddData()">
+   <table>
+    <thead>
+        <th>NAme </th>
+        <th>EMail</th>
+    </thead>
+    <tbody id="tbdy">
+
+    </tbody>
+   </table>
+    
+</body>
+</html>

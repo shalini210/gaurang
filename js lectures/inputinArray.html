@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         let cities = []
+        function Addcity()
+        {
+            var txtcity = document.getElementById("txtcity")
+            let cityname = txtcity.value;
+            let p = -1;
+            p=  cities.findIndex((c)=>c==cityname)
+            // for(var i=0;i<cities.length;i++)
+            // {
+            //         if(cityname==cities[i])
+            //         {
+            //             p=1
+            //             break;
+            //         }                    
+            // }
+            if(p==-1)
+            {
+            cities.push(cityname)
+            showCities()
+            txtcity.value=""
+            txtcity.focus()
+            }
+            else
+            {
+                alert("city already present ")
+            }            
+        }
+        function DeleteCity()
+        {
+            cities.pop()
+            showCities()
+        }
+        function showCities()
+        {           
+            var pcities = document.getElementById("pcities");
+            pcities.innerHTML = " "
+            // for(var i = 0 ;i<cities.length;i++)
+            for(var i = cities.length-1;i>=0;i--)
+        {
+            pcities.innerHTML+= cities[i] +"<br>"
+        }        
+        }
+    </script>
+</head>
+<body>
+    <p>City Name : <input type="text" id="txtcity"></p>
+    <input type="button" value="Add" onclick="Addcity()">
+    <input type="button" value="Remove Last" onclick="DeleteCity()">    
+    <p id="pcities">
+
+    </p>
+    
+</body>
+</html>

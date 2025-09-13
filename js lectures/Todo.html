@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let Tasks = []
+        function Addtask()
+        {
+            let txttask = document.getElementById("txttask")
+            let hmsg = document.getElementById("hmsg")
+            let taskname = txttask.value;
+            if(taskname =="")
+            {
+                hmsg.innerHTML="Please Enter Task"
+            }
+            else
+            {
+                if(Tasks.findIndex((e)=>e.taskname ==taskname)<0)
+                {
+        let task = {taskname:taskname,status:'incomplete'}
+        Tasks.push(task)
+        showTasks();
+        txttask.value=""
+        txttask.focus
+                }
+                else
+                {
+                    hmsg.innerHTML = "Task Already Present"
+                }
+
+            }
+        }
+      function  showTasks()
+        {
+ let tbdy = document.getElementById("tbdy")
+ let cname ="orange"
+         let tasksui=  Tasks.map((t,index)=>
+        {
+            if(t.status=="Complete")
+        {
+            cname="yellowgreen"
+        }
+        else
+        {
+            cname="orange"
+        }
+            return `<tr style="background-color:${cname}">
+                <td>${t.taskname}</td>
+                <td>${t.status}</td>
+                <td><input type="button" value="Delete" onclick='deleteTask(${index})'/></td>
+                <td><input type="button" value="Complete" onclick='editTask(${index})'/></td>
+                
+                </tr>`
+        }).join('')
+        tbdy.innerHTML=tasksui
+        }
+        function editTask(index)
+        {
+            Tasks[index].status="Complete"
+            showTasks();
+        }
+        function deleteTask(index)
+        {
+            Tasks.splice(index,1);
+            showTasks();
+        }
+    </script>
+</head>
+<body>
+    <p>
+        Enter task:
+        <input type="text"  id="txttask">
+    </p>
+    <h3 id="hmsg"></h3>
+    <input type="button" value="Add" id="btnAdd" onclick="Addtask()">
+    <table>
+        <thead>
+            <tr><td>Task</td><td>Status</td>
+                <td>Delete</td><td>Complete</td>
+            </tr>
+        </thead>
+        <tbody id="tbdy">
+        </tbody>
+    </table>
+    
+</body>
+</html>

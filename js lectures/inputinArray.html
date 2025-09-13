@@ -12,14 +12,7 @@
             let cityname = txtcity.value;
             let p = -1;
             p=  cities.findIndex((c)=>c==cityname)
-            // for(var i=0;i<cities.length;i++)
-            // {
-            //         if(cityname==cities[i])
-            //         {
-            //             p=1
-            //             break;
-            //         }                    
-            // }
+          
             if(p==-1)
             {
             cities.push(cityname)
@@ -31,6 +24,18 @@
             {
                 alert("city already present ")
             }            
+        }
+        function DeleteCityByname()
+        {
+            var txtcity = document.getElementById("txtcity");
+         let     p=  cities.findIndex((c)=>c==txtcity.value)
+            if(p==-1)
+        { alert("city not pressent")}
+        else
+        {
+            cities.splice(p,1)
+            showCities()
+        }
         }
         function DeleteCity()
         {
@@ -53,6 +58,7 @@
     <p>City Name : <input type="text" id="txtcity"></p>
     <input type="button" value="Add" onclick="Addcity()">
     <input type="button" value="Remove Last" onclick="DeleteCity()">    
+    <input type="button" value="Delet city by Name " onclick="DeleteCityByname()">
     <p id="pcities">
 
     </p>
